@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import { CartContext } from "../context/CartContext";
 const CheckoutDetails = ({ setModal }) => {
-  const { cart, setCart, cartTotal } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
   const [successMsg, setSuccessMsg] = useState(false);
   const [count, setCount] = useState(5);
   useEffect(() => {

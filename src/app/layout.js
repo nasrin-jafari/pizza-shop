@@ -15,8 +15,6 @@ const bangers = Bangers({
   variable: "--font-bangers",
   weight: ["400"],
 });
-
-
 const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
   variable: "--font-robotoCondensed",
@@ -31,10 +29,10 @@ export default function RootLayout({ children }) {
         >
           <Nav />
           <CartMobileIcon />
-          <CartMobile/>
+          <CartMobile />
           {children}
-          <CartDesktop/>
-          <Footer/>
+          <CartDesktop />
+          <Footer />
         </body>
       </html>
     </CartProvider>

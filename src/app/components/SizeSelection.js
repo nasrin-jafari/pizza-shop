@@ -1,13 +1,13 @@
 import Image from "next/image";
+import { labelsSize } from "@/data/data";
 const SizeSelection = ({ pizza, setSize, size }) => {
-  const labels = ["small", "medium", "large"];
   return (
     <div
       className="mx-auto max-w-xs lg:max-w-none 
     flex items-center justify-center lg:justify-start"
     >
       <div className="flex gap-x-12 items-baseline mb-10 font-medium ">
-        {labels.map((label) => (
+        {labelsSize.map((label) => (
           <label
             key={label}
             className="capitalize flex flex-col items-center gap-x-2 cursor-pointer"

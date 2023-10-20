@@ -1,12 +1,12 @@
+import { labelsCrust } from "@/data/data";
 const CrustSelection = ({ crust, setCrust }) => {
-  const labels = ["traditional", "thin"];
   return (
     <div
       className="flex justify-center items-center 
     lg:justify-start"
     >
       <div className="flex gap-x-12 mb-8 font-medium ">
-        {labels.map((label) => (
+        {labelsCrust.map((label) => (
           <label
             key={label}
             className="capitalize flex items-center gap-2 cursor-pointer "

@@ -58,9 +58,7 @@ const CartProvider = ({ children }) => {
     setIsOpen(true);
   };
   const removeItem = (id) => {
-    const itemIndex = cart.findIndex(
-      (item) => item.id === id 
-    );
+    const itemIndex = cart.findIndex((item) => item.id === id);
     if (itemIndex !== -1) {
       const newCart = [...cart];
       newCart.splice(itemIndex, 1);
@@ -68,9 +66,7 @@ const CartProvider = ({ children }) => {
     }
   };
   const increaseAmount = (id) => {
-    const itemIndex = cart.findIndex(
-      (item) => item.id === id 
-    );
+    const itemIndex = cart.findIndex((item) => item.id === id);
     if (itemIndex !== -1) {
       const newCart = [...cart];
       newCart[itemIndex].amount += 1;
@@ -78,9 +74,7 @@ const CartProvider = ({ children }) => {
     }
   };
   const decreaseAmount = (id) => {
-    const itemIndex = cart.findIndex(
-      (item) => item.id === id
-    );
+    const itemIndex = cart.findIndex((item) => item.id === id);
     if (itemIndex !== -1) {
       const newCart = [...cart];
       if (newCart[itemIndex].amount > 1) {
@@ -102,7 +96,7 @@ const CartProvider = ({ children }) => {
         increaseAmount,
         itemAmount,
         cartTotal,
-        setCart
+        setCart,
       }}
     >
       {children}
