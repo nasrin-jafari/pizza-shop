@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { IoCloseOutline } from "react-icons/io5";
 const CartTop = () => {
-  const { setIsOpen, isOpen, itemAmount } = useContext(CartContext);
+  const { setIsOpen, itemAmount } = useContext(CartContext);
   return (
     <div
       className="w-full h-20 border-b flex 

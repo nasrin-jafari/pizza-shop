@@ -26,7 +26,7 @@ const CartItem = ({ pizza }) => {
             </div>
             <div className="flex items-center gap-x-1 ">
               <div
-                onClick={() => decreaseAmount(pizza.id, pizza.price)}
+                onClick={() => decreaseAmount(pizza.id)}
                 className="w-[18px] h-[18px] flex justify-center
              items-center cursor-pointer text-white 
              gradient rounded-full"
@@ -40,7 +40,7 @@ const CartItem = ({ pizza }) => {
                 {pizza.amount}
               </div>
               <div
-                onClick={() => increaseAmount(pizza.id, pizza.price)}
+                onClick={() => increaseAmount(pizza.id)}
                 className="w-[18px] h-[18px] flex justify-center 
             items-center cursor-pointer text-white
              gradient rounded-full"
@@ -52,7 +52,7 @@ const CartItem = ({ pizza }) => {
         </div>
         <div className="flex flex-col justify-between ">
           <div
-            onClick={() => removeItem(pizza.id, pizza.price, pizza.crust)}
+            onClick={() => removeItem(pizza.id)}
             className="text-2xl flex justify-center object-center self-end
            cursor-pointer hover:scale-110 duration-100 
            transition-all text-orange"

@@ -1,12 +1,9 @@
 "use client";
-
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import CartTop from "./CartTop";
 import CartBottom from "./CartBottom";
-import Pizza from "./Pizza";
 import CartItem from "./CartItem";
-
 const CartMobile = () => {
   const { cart, isOpen } = useContext(CartContext);
   return (
