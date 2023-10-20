@@ -1,6 +1,6 @@
 import Pizza from "./components/Pizza";
 import Banner from "./components/Banner";
-import { pizzas } from "./../data/data";
+import { pizzas } from "../data/data";
 export const metadata = {
   title: "pizza shop",
   icons: {

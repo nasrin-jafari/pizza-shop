@@ -4,7 +4,7 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
-import { mouseParallaxChild } from "./../../data/data";
+import { mouseParallaxChild } from "../../data/data";
 const Banner = () => {
   return (
     <section className="bg-primary bg-pattern  lg:min-h-[768px] pt-16 lg:pt-16">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { labelsSize } from "./../../data/data.js";
+import { labelsSize } from "../../data/data";
 const SizeSelection = ({ pizza, setSize, size }) => {
   return (
     <div
