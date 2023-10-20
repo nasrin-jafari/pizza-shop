@@ -4,8 +4,6 @@ const Loading = () => {
       <span class="loader"></span>
     </div>
   );
-
 };
 
 export default Loading;
-

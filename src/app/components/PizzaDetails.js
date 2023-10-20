@@ -5,15 +5,13 @@ import SizeSelection from "./SizeSelection";
 import CrustSelection from "./CrustSelection";
 import Topping from "./Topping";
 import { CartContext } from "../context/CartContext";
-
-const PizzaDetails = ({ pizza, modal, setModal }) => {
+const PizzaDetails = ({ pizza, setModal }) => {
   const [size, setSize] = useState("small");
   const [crust, setCrust] = useState("traditional");
   const [additionalTopping, setAdditionalTopping] = useState([]);
   const [additionalToppingPrice, setAdditionalToppingPrice] = useState(0);
   const [price, setPrice] = useState(0);
   const { addToCart } = useContext(CartContext);
-
   useEffect(() => {
     size === "small"
       ? setPrice(parseFloat(pizza.priceSm + additionalToppingPrice).toFixed(2))
@@ -22,9 +20,7 @@ const PizzaDetails = ({ pizza, modal, setModal }) => {
       : size === "large"
       ? setPrice(parseFloat(pizza.priceLg + additionalToppingPrice).toFixed(2))
       : null;
-  });
-  //  console.log(price)
-  // console.log(additionalTopping)
+  }, [size, additionalToppingPrice]);
   useEffect(() => {
     if (additionalTopping.length > 0) {
       const toppingPrice = additionalTopping.reduce((a, c) => {
@@ -38,7 +34,6 @@ const PizzaDetails = ({ pizza, modal, setModal }) => {
 
   return (
     <div className="flex flex-col lg:flex-row lg:gap-x-8 h-full md:p-8">
-      {/* top */}
       <div className="lg:flex-1 flex justify-center items-center">
         <div className="max-w-[240px] lg:max-w-none mt-6 lg:mt-0">
           <Image
@@ -51,7 +46,6 @@ const PizzaDetails = ({ pizza, modal, setModal }) => {
           />
         </div>
       </div>
-      {/* detail */}
       <div className=" flex flex-col flex-1">
         <div className="flex-1 p-2 text-center lg:text-left">
           <div

@@ -3,27 +3,23 @@ import Image from "next/image";
 import { IoMdCheckmark } from "react-icons/io";
 const Topping = ({ topping, additionalTopping, setAdditionalTopping }) => {
   const [isChecked, setIsChecked] = useState(false);
-
   const handleCheckBox = () => {
     setIsChecked(!isChecked);
   };
   const handleTopping = () => {
     if (isChecked) {
       const newToppings = new Set([...additionalTopping, { ...topping }]);
-      //  console.log(newToppings)
       setAdditionalTopping(Array.from(newToppings));
-      // console.log(additionalTopping)
     } else {
       const newToppings = additionalTopping.filter((toppingObject) => {
         return toppingObject.name !== topping.name;
       });
-      setAdditionalTopping(newToppings)
+      setAdditionalTopping(newToppings);
     }
   };
   useEffect(() => {
     handleTopping();
   }, [isChecked]);
-  // console.log(additionalTopping)
   return (
     <div
       className={`${isChecked && "border-orange"} 

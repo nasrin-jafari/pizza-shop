@@ -1,11 +1,16 @@
-const CrustSelection = ({crust , setCrust}) => {
-const labels = ["traditional" , "thin" , ];
+const CrustSelection = ({ crust, setCrust }) => {
+  const labels = ["traditional", "thin"];
   return (
-    <div className="flex justify-center items-center 
-    lg:justify-start">
+    <div
+      className="flex justify-center items-center 
+    lg:justify-start"
+    >
       <div className="flex gap-x-12 mb-8 font-medium ">
         {labels.map((label) => (
-          <label key={label} className="capitalize flex items-center gap-2 cursor-pointer ">
+          <label
+            key={label}
+            className="capitalize flex items-center gap-2 cursor-pointer "
+          >
             <input
               className="appearance-none w-4 h-4 border
            border-gray-400 rounded-full checked:bg-gradient-to-r

@@ -1,6 +1,5 @@
 import Image from "next/image";
 const SizeSelection = ({ pizza, setSize, size }) => {
-  // console.log(pizza);
   const labels = ["small", "medium", "large"];
   return (
     <div

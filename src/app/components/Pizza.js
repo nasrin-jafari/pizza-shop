@@ -11,7 +11,6 @@ const modalStyles = {
   },
 };
 const Pizza = ({ pizza }) => {
-  // console.log(pizza)
   const [modal, setModal] = useState(false);
   const openModal = () => {
     setModal(true);
@@ -22,7 +21,7 @@ const Pizza = ({ pizza }) => {
   return (
     <div
       className="group py-2 
-    px-4 xl:py-4 xl:px-2 rounded-xl border flex flex-col items-center"
+    px-4 xl:py-4 xl:px-2 rounded-xl border flex flex-col items-center text-justify"
     >
       <Image
         width={270}
