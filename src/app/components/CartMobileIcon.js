@@ -1,9 +1,8 @@
-"use client"
+"use client";
 import { useContext } from "react";
 import { BsHandbagFill } from "react-icons/bs";
 import { CartContext } from "../context/CartContext";
 const CartMobileIcon = () => {
-  // console.log(useContext(CartContext));
   const { setIsOpen, isOpen, itemAmount } = useContext(CartContext);
   return (
     <div
