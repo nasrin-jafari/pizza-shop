@@ -1,4 +1,4 @@
-import { labelsCrust } from "@/data/data";
+import { labelsCrust } from "./../../data/data.js";
 const CrustSelection = ({ crust, setCrust }) => {
   return (
     <div
